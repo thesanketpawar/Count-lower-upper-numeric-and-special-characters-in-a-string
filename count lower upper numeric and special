@@ -1,0 +1,18 @@
+def count_char(str):
+  lower,   upper,  numeric,  special= 0,0,0,0
+
+  for i in range(len(str)):
+    if str[i] >= 'a' and str[i] <= 'z': lower += 1
+    elif  str[i] >= 'A' and str[i] <= 'Z': upper+=1
+    elif  str[i] >= '0' and str[i] <= '9': numeric+=1
+    else: special+=1
+
+  return  lower, upper,numeric,special
+  
+  str = "aB@1"
+print("Original Substrings:",str)
+l,u,n,s = count_char(str)
+print('Upper Count',u)
+print('Lower Count',l)
+print('Number Count',n)
+print('Special Count',s)
